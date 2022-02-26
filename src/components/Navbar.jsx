@@ -1,19 +1,15 @@
-import { Navbar, Container, Brand, Link, Nav } from "react-bootstrap";
+import Link from "next/link";
 
 export default function (props) {
   return (
-    <Navbar bg="light" variant="light">
-      <Container>
-        <Navbar.Brand href="#home">{props.name}</Navbar.Brand>
-        <Nav className="me-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#features">Features</Nav.Link>
-          <Nav.Link href="#pricing">Pricing</Nav.Link>
-        </Nav>
-        <Nav>
-          <Nav.Link href="/">Sair</Nav.Link>
-        </Nav>
-      </Container>
-    </Navbar>
+    <header className="bg-white flex justify-between py-3 px-4 md:px-6 items-center">
+      <div className="flex">
+        <h1 className="text-xl">Economapas Quiz</h1>
+      </div>
+      <div className="flex gap-4 md:gap-6 items-center">
+        <p className="text-lg">{props.name}</p>
+        <Link href="/">Sair</Link>
+      </div>
+    </header>
   );
 }
