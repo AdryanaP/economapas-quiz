@@ -1,0 +1,30 @@
+.title {
+  margin-top: 0px;
+  font-size: 28px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.cardContent {
+  background-color: white;
+  border-radius: 5px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.input {
+  padding: 0.5rem;
+  display: block;
+  margin-bottom: 1rem;
+  margin-left: 0px;
+}
+
+.form {
+  text-align: center;
+}
