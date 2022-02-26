@@ -1,7 +1,6 @@
 import Link from "next/link";
 
 export default function LinkValidator(props) {
-  console.log(props.name);
   if (props.name.trim() === "") {
     return (
       <span>Entrar</span>
@@ -10,7 +9,7 @@ export default function LinkValidator(props) {
     return (
       <Link
         href={{
-          pathname: "/dashboard",
+          pathname: "/quizes",
           query: { name: props.name },
         }}
       >
