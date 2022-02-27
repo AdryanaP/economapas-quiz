@@ -1,15 +1,17 @@
 import React from "react";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import { useState } from "react";
+import { useContext } from "react";
+import MyContext from '../contexts/myContext';
 import LinkValidator from "../components/LinkValidator";
 
 export default function Home() {
-  const [inputName, setInputName] = useState("");
+  const { name, setName } = useContext(MyContext)
 
-  const name = () => {
+
+  const changeName = () => {
     const inputN = document.getElementById("inputName");
-    setInputName(inputN.value);
+    setName(inputN.value);
   };
 
   return (
@@ -30,11 +32,11 @@ export default function Home() {
                 id="inputName"
                 placeholder="Insira seu nome"
                 className={styles.input}
-                onChange={name}
+                onChange={changeName}
                 onSubmit={(e) => e.preventDefault()}
               />
               <button>
-                <LinkValidator name={inputName} />
+                <LinkValidator name={name} />
               </button>
             </form>
           </div>

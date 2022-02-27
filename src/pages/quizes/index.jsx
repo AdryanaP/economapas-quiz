@@ -1,16 +1,15 @@
-import { useRouter } from "next/router";
 import Navbar from "../../components/Navbar";
 import Cards from "../../components/Cards";
+import MyContext from "../../contexts/myContext";
+import { useContext } from "react";
 
 export default function Quizes() {
-  const router = useRouter();
-  const {
-    query: { name },
-  } = router;
+  const { name, setName } = useContext(MyContext);
+
   return (
     <div className="fullscreen">
-      <Navbar name={name}></Navbar>
-      <Cards name={name}/>
+      <Navbar />
+      <Cards />
     </div>
   );
 }

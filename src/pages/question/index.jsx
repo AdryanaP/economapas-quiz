@@ -1,23 +1,17 @@
-import { useRouter } from "next/router";
+import MyContext from '../../contexts/myContext';
 import Navbar from "../../components/Navbar";
 import Cards from "../../components/Cards";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { getQuestions } from "../../repository/questionsRepository"
 
 export default function Question(props) {
+  const { name, setName } = useContext(MyContext)
   const [questions, setQuestions] = useState([]);
 
   useEffect(() => {
     const fetchQuestions = async () => {
-      const result = await fetch(
-        "https://quizapi.io/api/v1/questions?apiKey=x5yYMkHgQ0xhz7Q7RD1CfTQESV5gXkBwlfcuNFed&limit=10",
-        {
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
-          method: "GET",
-        }
-      ).then((res) => res.json());
+      const result = await getQuestions().then((res) => res.json());
 
       console.log(result);
       setQuestions(result);
@@ -25,6 +19,8 @@ export default function Question(props) {
 
     fetchQuestions();
   }, []);
+
+  console.log(questions);
 
   const cards = [
     {
@@ -52,12 +48,7 @@ export default function Question(props) {
       setIndex(++index);
     }
   };
-
-  const router = useRouter();
-  const {
-    query: { name },
-  } = router;
-
+  
   return (
     <div>
       <Navbar name={props.name}></Navbar>
@@ -65,10 +56,17 @@ export default function Question(props) {
         className="p-8 md:p-12 bg-white rounded text-center w-64 md:w-80 space-y-8 my-8 center"
         key={cards[index].title}
       >
-        <div className="space-y-1">
-          <p className="text-xl font-bold highlight">{questions[index].question}</p>
-          <p>{cards[index].description}</p>
-        </div>
+        {questions[index] && (
+          <div className="space-y-1">
+            <p className="text-xl font-bold highlight">
+              {questions[index].question}
+            </p>
+            <p>{cards[index].description}</p>
+          </div>
+        )}
+        {!questions[index] && (
+          <p>Loading...</p>
+        )}
         <button className="bg-gray-300 p-2 rounded" onClick={nextQuestion}>
           Responder
         </button>

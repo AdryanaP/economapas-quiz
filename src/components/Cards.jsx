@@ -1,9 +1,6 @@
 import Link from "next/link";
-import { useState, useEffect } from "react";
 
-export default function (props) {
-
-
+export default function () {
   const cards = [
     {
       title: "Linux",
@@ -33,14 +30,7 @@ export default function (props) {
           <p>{card.description}</p>
         </div>
         <button className="bg-gray-300 p-2 rounded">
-          <Link
-            href={{
-              pathname: "/question",
-              query: { name: props.name },
-            }}
-          >
-            Responder
-          </Link>
+          <Link href={"/question"}>Responder</Link>
         </button>
       </div>
     );
