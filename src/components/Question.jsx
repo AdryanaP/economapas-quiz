@@ -61,12 +61,12 @@ export default function Question() {
 
   return (
     <div
-      className="p-8 md:p-12 bg-white rounded text-center w-72 md:w-29 space-y-8 my-8 center"
+      className="p-8 md:p-12 bg-white rounded text-center w-72 md:w-29 space-y-8 my-8 translate absolute top-1/2 left-1/2"
       key={index}
     >
       {questions[index] && (
         <div className="space-y-4">
-          <p className="text-xl font-bold highlight">
+          <p className="text-xl font-bold font-highlight">
             <span>{index + 1} - </span>
             {questions[index].question}
           </p>

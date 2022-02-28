@@ -1,6 +1,5 @@
 import React from "react";
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
 import { useContext, useEffect } from "react";
 import MyContext from '../contexts/myContext';
 import LinkValidator from "../components/LinkValidator";
@@ -27,15 +26,15 @@ export default function Home() {
       </Head>
 
       <main>
-        <section className="center flexCenter">
-          <div className={styles.cardContent}>
-            <h1 className={styles.title}>Insira seu nome:</h1>
-            <form className={styles.form}>
+        <section className="translate absolute top-1/2 left-1/2 flex justify-center items-center">
+          <div className="bg-white rounded p-8 text-center">
+            <h1 className="font-highlight text-2xl">Insira seu nome:</h1>
+            <form className="text-center">
               <input
                 type="text"
                 id="inputName"
                 placeholder="Insira seu nome"
-                className={styles.input}
+                className="p-2 block mb-4 ml-0"
                 onChange={changeName}
                 onSubmit={(e) => e.preventDefault()}
               />

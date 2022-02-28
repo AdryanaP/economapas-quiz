@@ -10,31 +10,23 @@ html {
 }
 
 body {
-  background: rgb(173, 16, 146);
-  background: linear-gradient(158deg, rgba(173, 16, 146, 0.9640231092436975) 20%, rgba(176, 94, 21, 0.9612219887955182) 82%);
+  background: #2980B9;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
   margin: 0px;
 }
 
-.highlight {
-  font-family: 'Poppins', sans-serif;
-}
-
 .fullscreen {
   height: 100%;
 }
 
-.center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+.translate {
   transform: translate(-50%, -50%);
-}
-
-.flexCenter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }

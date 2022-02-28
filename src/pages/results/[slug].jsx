@@ -29,7 +29,7 @@ export default function Results() {
       </div>
       {questions.map((question) => (
         <div className="space-y-4">
-          <p className="text-xl font-bold highlight">
+          <p className="text-xl font-bold font-highlight">
             <span>{questions.indexOf(question)+1} - </span>
             {question.question}
           </p>

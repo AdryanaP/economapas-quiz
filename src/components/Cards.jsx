@@ -39,10 +39,10 @@ export default function () {
           key={card.title}
         >
           <div className="space-y-1">
-            <p className="text-xl font-bold highlight">{card.title}</p>
+            <p className="text-xl font-bold font-highlight">{card.title}</p>
             <p>{card.description}</p>
           </div>
-          <div className="flexCenter gap-4">
+          <div className="flex justify-center items-center gap-4">
             <button className="bg-gray-300 p-2 rounded">
               <Link
                 href={{
