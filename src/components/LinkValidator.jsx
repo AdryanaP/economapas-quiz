@@ -12,7 +12,7 @@ export default function LinkValidator() {
   } else {
     return (
       <Link
-        href={"/quizes"}
+        href={{pathname: "/quizes/[slug]", query: { slug: name }}}
       >
         Entrar
       </Link>

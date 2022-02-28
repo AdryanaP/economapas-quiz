@@ -1,10 +1,14 @@
 import Navbar from "../../components/Navbar";
 import Cards from "../../components/Cards";
+import { useContext, useEffect } from "react";
 import MyContext from "../../contexts/myContext";
-import { useContext } from "react";
 
 export default function Quizes() {
-  const { name, setName } = useContext(MyContext);
+  const { setMyAnswers } = useContext(MyContext);
+
+  useEffect(() => {
+    setMyAnswers([]);
+  }, []);
 
   return (
     <div className="fullscreen">

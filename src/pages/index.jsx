@@ -1,13 +1,17 @@
 import React from "react";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import MyContext from '../contexts/myContext';
 import LinkValidator from "../components/LinkValidator";
 
 export default function Home() {
-  const { name, setName } = useContext(MyContext)
+  const { name, setName, setAllMyAnswers, setCorrectAnswers } = useContext(MyContext)
 
+  useEffect(() => {
+    setAllMyAnswers("")
+    setCorrectAnswers(0)
+  }, []);
 
   const changeName = () => {
     const inputN = document.getElementById("inputName");
