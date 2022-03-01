@@ -4,12 +4,12 @@ import { useContext, useEffect } from "react";
 import MyContext from "../../contexts/myContext";
 
 export default function Quizes() {
-  const { setMyAnswers, setIndex, setCorrectAnswers } = useContext(MyContext);
+  const { setMyAnswersQuiz, setIndex, setCorrectAnswersQuiz } = useContext(MyContext);
 
   useEffect(() => {
-    setMyAnswers([]);
+    setMyAnswersQuiz([]);
     setIndex(0)
-    setCorrectAnswers(0)
+    setCorrectAnswersQuiz(0)
   }, []);
 
 

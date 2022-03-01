@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useContext } from "react";
 
 export default function () {
-  const { name, allMyAnswers, correctAnswers } = useContext(MyContext);
+  const { name, allMyAnswers, allCorrectAnswers } = useContext(MyContext);
 
   
 
@@ -22,7 +22,7 @@ export default function () {
           Questões: {allMyAnswers.length}
         </p>
         <p>
-          {/* Acertos: {correctAnswers} */}
+          Acertos: {allCorrectAnswers}
         </p>
         <Link href="/">Sair</Link>
       </div>

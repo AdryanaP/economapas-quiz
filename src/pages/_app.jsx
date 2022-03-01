@@ -8,10 +8,11 @@ function MyApp({ Component, pageProps }) {
   const [category, setCategory] = useState("");
   const [questions, setQuestions] = useState([]);
   const [index, setIndex] = useState(0);
-  const [myAnswers, setMyAnswers] = useState([]);
+  const [myAnswersQuiz, setMyAnswersQuiz] = useState([]);
   const [allMyAnswers, setAllMyAnswers] = useState([]);
   const [answerChosen, setAnswerChosen] = useState("");
-  const [correctAnswers, setCorrectAnswers ] = useState(0)
+  const [correctAnswersQuiz, setCorrectAnswersQuiz ] = useState(0)
+  const [allCorrectAnswers, setAllCorrectAnswers ] = useState(0)
 
   const context = {
     name,
@@ -22,14 +23,15 @@ function MyApp({ Component, pageProps }) {
     setQuestions,
     index,
     setIndex,
-    myAnswers,
-    setMyAnswers,
+    myAnswersQuiz,
+    setMyAnswersQuiz,
     allMyAnswers,
     setAllMyAnswers,
     answerChosen,
     setAnswerChosen,
-    correctAnswers,
-    setCorrectAnswers
+    correctAnswersQuiz,
+    setCorrectAnswersQuiz,
+    allCorrectAnswers, setAllCorrectAnswers
   };
 
   return (

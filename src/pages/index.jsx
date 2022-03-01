@@ -5,11 +5,11 @@ import MyContext from '../contexts/myContext';
 import LinkValidator from "../components/LinkValidator";
 
 export default function Home() {
-  const { name, setName, setAllMyAnswers, setCorrectAnswers } = useContext(MyContext)
+  const { name, setName, setAllMyAnswers, setAllCorrectAnswers } = useContext(MyContext)
 
   useEffect(() => {
     setAllMyAnswers("")
-    setCorrectAnswers(0)
+    setAllCorrectAnswers(0)
   }, []);
 
   const changeName = () => {

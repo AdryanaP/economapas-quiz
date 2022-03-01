@@ -7,7 +7,7 @@ export default function Feedback() {
     index,
     setIndex,
     questions,
-    myAnswers,
+    myAnswersQuiz,
     setMyAnswers,
     allMyAnswers,
     setAllMyAnswers,
@@ -21,7 +21,7 @@ export default function Feedback() {
     const results = Object.keys(answers).map((answer) => {
       return {
         label: answers[answer],
-        isMyAnswer: answer === myAnswers[index],
+        isMyAnswer: answer === myAnswersQuiz[index],
         isCorrectAnswer: correctAnswers[`${answer}_correct`] === "true",
       };
     });

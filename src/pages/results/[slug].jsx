@@ -8,13 +8,13 @@ export default function Results() {
     index,
     setIndex,
     questions,
-    myAnswers,
+    myAnswersQuiz,
     setMyAnswers,
     allMyAnswers,
     setAllMyAnswers,
     answerChosen,
     setAnswerChosen,
-    correctAnswers,
+    correctAnswersQuiz,
     setCorretAnswers,
   } = useContext(MyContext);
 
@@ -25,7 +25,7 @@ export default function Results() {
       <Navbar />
       <div className="p-4 md:p-6 md:mx-28 mb-6 mt-10 bg-white rounded text-center w-auto space-y-8 center">
         <p className="text-xl">
-          Acertou {correctAnswers} de {myAnswers.length} questões!
+          Acertou {correctAnswersQuiz} de {myAnswersQuiz.length} questões!
         </p>
       </div>
       <div className="md:mx-28 flex justify-between text-lg">

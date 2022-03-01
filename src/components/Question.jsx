@@ -8,14 +8,16 @@ export default function Question() {
     index,
     setIndex,
     questions,
-    myAnswers,
-    setMyAnswers,
+    myAnswersQuiz,
+    setMyAnswersQuiz,
+    allCorrectAnswers,
+    setAllCorrectAnswers,
     allMyAnswers,
     setAllMyAnswers,
     answerChosen,
     setAnswerChosen,
-    correctAnswers,
-    setCorrectAnswers,
+    correctAnswersQuiz,
+    setCorrectAnswersQuiz,
   } = useContext(MyContext);
 
   const [error, setError] = useState("");
@@ -31,7 +33,8 @@ export default function Question() {
     for (const result in options) {
       if (options[result] === "true") {
         if (result.includes(answerChosen)) {
-          setCorrectAnswers(++correctAnswers);
+          setCorrectAnswersQuiz(++correctAnswersQuiz);
+          setAllCorrectAnswers(++allCorrectAnswers);
         }
       }
     }
@@ -46,7 +49,7 @@ export default function Question() {
       checkResult();
       setError("");
       setIndex(++index);
-      setMyAnswers([...myAnswers, answerChosen]);
+      setMyAnswersQuiz([...myAnswersQuiz, answerChosen]);
       setAllMyAnswers([...allMyAnswers, answerChosen]);
       setAnswerChosen("");
       if (index === 10) {
@@ -58,8 +61,6 @@ export default function Question() {
       }
     }
   };
-
-  console.log(myAnswers);
 
   return (
     <div
