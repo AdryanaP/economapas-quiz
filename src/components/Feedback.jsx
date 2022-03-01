@@ -3,19 +3,7 @@ import MyContext from "../contexts/myContext";
 import { FaCheck, FaBan } from "react-icons/fa";
 
 export default function Feedback() {
-  const {
-    index,
-    setIndex,
-    questions,
-    myAnswersQuiz,
-    setMyAnswers,
-    allMyAnswers,
-    setAllMyAnswers,
-    answerChosen,
-    setAnswerChosen,
-    correctAnswers,
-    setCorretAnswers,
-  } = useContext(MyContext);
+  const { questions, myAnswersQuiz } = useContext(MyContext);
 
   function getFeedback(answers, index, correctAnswers) {
     const results = Object.keys(answers).map((answer) => {
@@ -28,7 +16,6 @@ export default function Feedback() {
     return results;
   }
 
-  // TODO: Checar se esta pegando a resposta da ultima pergunta
   return (
     <section className="md:mx-28 py-6 grid lg:grid-cols-2 xl:grid-cols-4 gap-4">
       {questions.map((question, i) => (
@@ -64,7 +51,9 @@ export default function Feedback() {
                         }`}
                       >
                         <li className="break-all">{answer.label}</li>
-                        <span className="mr-1">{answer.isMyAnswer ? <FaBan /> : ""}</span>
+                        <span className="mr-1">
+                          {answer.isMyAnswer ? <FaBan /> : ""}
+                        </span>
                       </div>
                     )}
                   </div>
@@ -72,16 +61,6 @@ export default function Feedback() {
               }
             }
           )}
-          {/* {Object.keys(question.answers).map((answer) => {
-            if (question.answers[answer]) {
-              getFeedback(question.answers, i, question.correct_answers, question.answers[answer])
-              return (
-                <div key={answer} className="flex gap-2 items-center">
-                  <li>{myAnswers[i] === answer ? "true" : "false"} {question.correct_answers[`${answer}_correct`]} {question.answers[answer]}</li>
-                </div>
-              );
-            }
-          })} */}
         </div>
       ))}
     </section>
