@@ -37,18 +37,20 @@ export default function Question() {
     }
   };
 
+  console.log(index);
+
   const nextQuestion = () => {
     if (!answerChosen) {
       setError("Marque uma opção");
     } else {
       checkResult();
-      if (index !== 9) {
-        setError("");
-        setIndex(++index);
-        setMyAnswers([...myAnswers, answerChosen]);
-        setAllMyAnswers([...allMyAnswers, answerChosen]);
-        setAnswerChosen("");
-      } else {
+      setError("");
+      setIndex(++index);
+      setMyAnswers([...myAnswers, answerChosen]);
+      setAllMyAnswers([...allMyAnswers, answerChosen]);
+      setAnswerChosen("");
+      if (index === 10) {
+        setIndex(0);
         router.push({
           pathname: "/results/[slug]",
           query: { slug: slug, difficulty: difficulty, name: name },
