@@ -32,7 +32,7 @@ export default function () {
   ];
 
   return (
-    <section className="grid md:grid-cols-2 justify-center items-center justify-items-center md:gap-8 p-8 lg:px-20 md:mt-32 fullscreen">
+    <section className="grid md:grid-cols-2 justify-center items-center justify-items-center md:gap-8 p-8 lg:px-20 pt-16 mt-6 md:mt-32 fullscreen">
       {cards.map((card) => (
         <div
           className="p-8 md:p-12 bg-white rounded text-center w-64 md:w-80 space-y-8 my-8"

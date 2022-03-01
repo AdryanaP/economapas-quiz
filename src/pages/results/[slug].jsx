@@ -23,7 +23,7 @@ export default function Results() {
   return (
     <div>
       <Navbar />
-      <div className="p-4 md:p-6 md:mx-28 mb-6 mt-10 bg-white rounded text-center w-auto space-y-8 center">
+      <div className="p-4 md:p-6 md:mx-28 mb-6 mt-24 bg-white rounded text-center w-auto space-y-8 center">
         <p className="text-xl">
           Acertou {correctAnswersQuiz} de {myAnswersQuiz.length} questões!
         </p>
