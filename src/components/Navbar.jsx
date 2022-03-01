@@ -22,7 +22,7 @@ export default function () {
           Questões: {allMyAnswers.length}
         </p>
         <p>
-          Acertos: {correctAnswers}
+          {/* Acertos: {correctAnswers} */}
         </p>
         <Link href="/">Sair</Link>
       </div>

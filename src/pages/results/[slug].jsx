@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import MyContext from "../../contexts/myContext";
 import Navbar from "../../components/Navbar";
+import Feedback from "../../components/Feedback";
 
 export default function Results() {
   const {
@@ -22,28 +23,16 @@ export default function Results() {
   return (
     <div>
       <Navbar />
-      <div className="p-8 md:p-12 bg-white rounded text-center w-72 md:w-29 space-y-8 my-8 center">
-        <p>
-          {correctAnswers}/{allMyAnswers.length + 1}
+      <div className="p-4 md:p-6 md:mx-28 mb-6 mt-10 bg-white rounded text-center w-auto space-y-8 center">
+        <p className="text-xl">
+          Acertou {correctAnswers} de {allMyAnswers.length + 1} questões!
         </p>
       </div>
-      {questions.map((question) => (
-        <div className="space-y-4">
-          <p className="text-xl font-bold font-highlight">
-            <span>{questions.indexOf(question)+1} - </span>
-            {question.question}
-          </p>
-          {Object.keys(question.answers).map((answer) => {
-            if (question.answers[answer]) {
-              return (
-                <div key={answer} className="flex gap-2 items-center">
-                    <li>{question.answers[answer]}</li>
-                </div>
-              );
-            }
-          })}
-        </div>
-      ))}
+      <div className="md:mx-28 flex justify-between text-lg">
+        <p>Confira o gabarito</p>
+        <p>Outros quizes</p>
+      </div>
+      <Feedback />
     </div>
   );
 }
