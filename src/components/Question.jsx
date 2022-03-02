@@ -64,7 +64,8 @@ export default function Question() {
 
   return (
     <div
-      className="p-8 md:p-12 bg-white rounded text-center w-72 md:w-29 space-y-8 my-8 translate absolute top-1/2 left-1/2"
+      className="p-8 md:p-12 bg-white rounded text-center w-72 md:w-29 
+        space-y-8 my-8 translate absolute top-1/2 left-1/2 z-1"
       key={index}
     >
       {questions[index] && (
@@ -79,7 +80,7 @@ export default function Question() {
       {!questions[index] && <p>Loading...</p>}
       <div className="flex items-center justify-between">
         <span className="text-xs text-red-700">{error}</span>
-        <button className="bg-gray-300 p-2 rounded" onClick={nextQuestion}>
+        <button className="bg-sky-400 p-2 px-4 rounded-md" onClick={nextQuestion}>
           Responder
         </button>
       </div>

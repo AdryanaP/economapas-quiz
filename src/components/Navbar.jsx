@@ -8,7 +8,7 @@ export default function () {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <header className="bg-white flex justify-between py-3 px-4 md:px-8 items-center fixed w-full top-0">
+    <header className="bg-white flex justify-between py-3 px-4 md:px-8 items-center fixed w-full top-0 z-50">
       <Link
         href={{
           pathname: "/quizes/[slug]",

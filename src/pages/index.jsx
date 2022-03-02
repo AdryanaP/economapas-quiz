@@ -82,7 +82,7 @@ export default function Home() {
                 </span>
                 <button
                   type="button"
-                  className="bg-sky-400 p-2 px-4 rounded"
+                  className="bg-sky-400 p-2 px-4 rounded-md"
                   onClick={(event) => validateInput(event)}
                 >
                   Entrar
