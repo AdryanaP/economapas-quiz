@@ -16,7 +16,7 @@ export default function Question() {
           return (
             <div
               key={answer}
-              className={`flex gap-3 items-center border rounded-3xl md:rounded-full w-96 p-2 md:p-4 ${
+              className={`flex gap-3 items-center border rounded-3xl md:rounded-full  p-2 md:p-4 ${
                 answer === answerChosen ? "border-sky-400" : ""
               }`}
             >
