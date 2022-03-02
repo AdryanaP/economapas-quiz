@@ -19,7 +19,7 @@ export default function Feedback() {
   return (
     <section className="md:mx-28 py-6 grid lg:grid-cols-2 xl:grid-cols-4 gap-4">
       {questions.map((question, i) => (
-        <div key={question.id} className="space-y-4 bg-white p-8">
+        <div key={question.id} className="space-y-4 bg-white rounded p-4 md:p-8">
           <p className="font-bold font-highlight text-lg">
             <span>{questions.indexOf(question) + 1} - </span>
             {question.question}

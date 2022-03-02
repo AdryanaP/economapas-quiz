@@ -39,7 +39,9 @@ export default function Quiz() {
         ></link>
       </Head>
       <Navbar />
-      <Question />
+      <div className="flex justify-center">
+        <Question />
+      </div>
     </div>
   );
 }

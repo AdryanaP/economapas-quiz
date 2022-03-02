@@ -65,7 +65,7 @@ export default function Question() {
   return (
     <div
       className="p-8 md:p-12 bg-white rounded text-center w-72 md:w-29 
-        space-y-8 my-8 translate absolute top-1/2 left-1/2 z-1"
+        space-y-8 my-28 lg:my-8 translate sm:absolute sm:top-1/2 sm:left-1/2 z-1"
       key={index}
     >
       {questions[index] && (
