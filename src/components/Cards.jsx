@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useContext } from "react";
 import { useRouter } from "next/router";
 import MyContext from "../contexts/myContext";
+import react from "react";
 
 export default function () {
   const router = useRouter();
@@ -32,7 +33,7 @@ export default function () {
   ];
 
   return (
-    <section className="grid md:grid-cols-2 justify-center items-center justify-items-center md:gap-8 p-8 lg:px-20 pt-16 mt-6 md:mt-32 fullscreen">
+    <>
       {cards.map((card) => (
         <div
           className="p-8 md:p-12 bg-white rounded text-center w-64 md:w-80 space-y-8 my-8"
@@ -67,6 +68,6 @@ export default function () {
           </div>
         </div>
       ))}
-    </section>
+    </>
   );
 }

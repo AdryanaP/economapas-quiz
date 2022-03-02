@@ -26,7 +26,12 @@ export default function Quizes() {
         ></link>
       </Head>
       <Navbar />
-      <Cards />
+      <section
+        className="grid md:grid-cols-2 justify-center items-center 
+        justify-items-center md:gap-8 p-8 lg:px-20 pt-16 mt-6 md:mt-32 fullscreen"
+      >
+        <Cards />
+      </section>
     </div>
   );
 }

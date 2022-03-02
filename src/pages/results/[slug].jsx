@@ -1,8 +1,10 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import MyContext from "../../contexts/myContext";
 import Navbar from "../../components/Navbar";
 import Head from "next/head";
 import Feedback from "../../components/Feedback";
+import Cards from "../../components/Cards";
+import { FaArrowDown } from "react-icons/fa";
 
 export default function Results() {
   const {
@@ -40,9 +42,23 @@ export default function Results() {
       </div>
       <div className="md:mx-28 flex justify-between text-lg">
         <p>Confira o gabarito</p>
-        <p>Outros quizes</p>
+        <div className="flex items-center gap-2">
+          <p>Outros quizes </p>
+          <FaArrowDown />
+        </div>
       </div>
       <Feedback />
+      <section className="mt-10">
+        <h2 className="text-xl text-center font-highlight">
+          Faça outros quizes:
+        </h2>
+        <div
+          className="grid md:grid-cols-2 2xl:grid-cols-4 justify-center items-center 
+          justify-items-center md:gap-8 mx-28  fullscreen"
+        >
+          <Cards />
+        </div>
+      </section>
     </div>
   );
 }
