@@ -43,7 +43,7 @@ export default function () {
             <p>{card.description}</p>
           </div>
           <div className="flex justify-center items-center gap-4">
-            <button className="bg-gray-300 p-2 rounded">
+            <span className="bg-gray-300 p-2 rounded">
               <Link
                 href={{
                   pathname: `/quiz/[slug]`,
@@ -52,8 +52,9 @@ export default function () {
               >
                 Fácil
               </Link>
-            </button>
-            <button className="bg-gray-300 p-2 rounded">
+            </span>
+
+            <span className="bg-gray-300 p-2 rounded">
               <Link
                 href={{
                   pathname: `/quiz/[slug]`,
@@ -62,7 +63,7 @@ export default function () {
               >
                 Difícil
               </Link>
-            </button>
+            </span>
           </div>
         </div>
       ))}

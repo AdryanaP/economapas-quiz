@@ -7,6 +7,9 @@ module.exports = {
     extend: {
       width: {
         29: "29rem"
+      },
+      colors: {
+        whiteTransparent: "#ffffff4d"
       }
     },
   },

@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import MyContext from "../../contexts/myContext";
 import Navbar from "../../components/Navbar";
+import Head from "next/head";
 import Feedback from "../../components/Feedback";
 
 export default function Results() {
@@ -18,10 +19,19 @@ export default function Results() {
     setCorretAnswers,
   } = useContext(MyContext);
 
-  setIndex(0)
+  setIndex(0);
 
   return (
     <div>
+      <Head>
+        <title>Economapas Quiz</title>
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        ></link>
+      </Head>
       <Navbar />
       <div className="p-4 md:p-6 md:mx-28 mb-6 mt-24 bg-white rounded text-center w-auto space-y-8 center">
         <p className="text-xl">

@@ -2,13 +2,9 @@ import { useContext, useState } from "react";
 import MyContext from "../contexts/myContext";
 
 export default function Question() {
-  const {
-    index,
-    questions,
-    answerChosen,
-    setAnswerChosen
-  } = useContext(MyContext);
-  
+  const { index, questions, setAnswerChosen } =
+    useContext(MyContext);
+
   const saveAnswer = (answer) => {
     setAnswerChosen(answer);
   };
@@ -26,7 +22,9 @@ export default function Question() {
                 value={answer}
                 onClick={() => saveAnswer(answer)}
               />
-              <label>{questions[index].answers[answer]}</label>
+              <label htmlFor={"questão" + questions[index].id}>
+                {questions[index].answers[answer]}
+              </label>
             </div>
           );
         }
