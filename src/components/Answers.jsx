@@ -16,7 +16,7 @@ export default function Question() {
           return (
             <div
               key={answer}
-              className={`flex gap-3 items-center border rounded-3xl md:rounded-full  p-2 md:p-4 ${
+              className={`flex gap-3 items-center border rounded-3xl px-2 md:px-4 ${
                 answer === answerChosen ? "border-sky-400" : ""
               }`}
             >
@@ -27,7 +27,7 @@ export default function Question() {
                 value={answer}
                 onClick={() => saveAnswer(answer)}
               />
-              <label htmlFor={answer} onClick={() => saveAnswer(answer)}>
+              <label htmlFor={answer} className="w-full py-2 md:py-4 cursor-pointer" onClick={() => saveAnswer(answer)}>
                 {questions[index].answers[answer]}
               </label>
             </div>

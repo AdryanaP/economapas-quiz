@@ -28,7 +28,9 @@ export default function () {
 
       <div
         className={`lg:flex flex-grow gap-4 md:gap-8 items-center justify-end bg-white rounded ${
-          navbarOpen ? "flex flex-col absolute top-0 right-0 mt-12 p-4" : "hidden"
+          navbarOpen
+            ? "flex flex-col absolute top-0 right-0 mt-12 p-4"
+            : "hidden"
         }`}
       >
         <p className="text-lg">{name}</p>

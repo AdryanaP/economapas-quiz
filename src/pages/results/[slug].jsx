@@ -1,27 +1,26 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import MyContext from "../../contexts/myContext";
 import Navbar from "../../components/Navbar";
 import Head from "next/head";
 import Feedback from "../../components/Feedback";
 import Cards from "../../components/Cards";
 import { FaArrowDown } from "react-icons/fa";
+import { useRouter } from "next/router";
 
 export default function Results() {
-  const {
-    index,
-    setIndex,
-    questions,
-    myAnswersQuiz,
-    setMyAnswers,
-    allMyAnswers,
-    setAllMyAnswers,
-    answerChosen,
-    setAnswerChosen,
-    correctAnswersQuiz,
-    setCorretAnswers,
-  } = useContext(MyContext);
+  const router = useRouter();
+  const { name, setIndex, myAnswersQuiz, correctAnswersQuiz } =
+    useContext(MyContext);
 
   setIndex(0);
+
+  useEffect(() => {
+    if (!name) {
+      router.push({
+        pathname: "/",
+      });
+    }
+  }, []);
 
   return (
     <div>

@@ -40,8 +40,6 @@ export default function Question() {
     }
   };
 
-  console.log(index);
-
   const nextQuestion = () => {
     if (!answerChosen) {
       setError("Marque uma opção");

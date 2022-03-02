@@ -1,13 +1,11 @@
 import Link from "next/link";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { useRouter } from "next/router";
 import MyContext from "../contexts/myContext";
-import react from "react";
 
 export default function () {
   const router = useRouter();
   const { slug } = router.query;
-  const { category, setCategory } = useContext(MyContext);
 
   const cards = [
     {

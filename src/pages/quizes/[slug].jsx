@@ -3,12 +3,20 @@ import Cards from "../../components/Cards";
 import { useContext, useEffect } from "react";
 import Head from "next/head";
 import MyContext from "../../contexts/myContext";
+import { useRouter } from "next/router";
 
 export default function Quizes() {
-  const { setMyAnswersQuiz, setIndex, setCorrectAnswersQuiz } =
+  const router = useRouter();
+  const { setMyAnswersQuiz, setIndex, setCorrectAnswersQuiz, name } =
     useContext(MyContext);
 
   useEffect(() => {
+    if (!name) {
+      router.push({
+        pathname: "/",
+      });
+    }
+
     setMyAnswersQuiz([]);
     setIndex(0);
     setCorrectAnswersQuiz(0);
