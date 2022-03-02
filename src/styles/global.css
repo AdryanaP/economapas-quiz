@@ -25,8 +25,6 @@ body {
   height: 100%;
 }
 
-@media (min-width: 640px) {
-  .translate {
-    transform: translate(-50%, -50%);
-  }
+.translate {
+  transform: translate(-50%, -50%);
 }

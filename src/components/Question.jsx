@@ -53,7 +53,6 @@ export default function Question() {
       setAllMyAnswers([...allMyAnswers, answerChosen]);
       setAnswerChosen("");
       if (index === 10) {
-        setIndex(0);
         router.push({
           pathname: "/results/[slug]",
           query: { slug: slug, difficulty: difficulty, name: name },
@@ -64,8 +63,8 @@ export default function Question() {
 
   return (
     <div
-      className="p-8 md:p-12 bg-white rounded text-center w-72 md:w-29 
-        space-y-8 my-28 lg:my-8 translate sm:absolute sm:top-1/2 sm:left-1/2 z-1"
+      className="p-8 md:p-12 bg-white rounded text-center w-96 sm:w-29 
+        space-y-8 my-28 md:my-40 z-1"
       key={index}
     >
       {questions[index] && (
@@ -78,7 +77,7 @@ export default function Question() {
         </div>
       )}
       {!questions[index] && <p>Loading...</p>}
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between mt-8">
         <span className="text-xs text-red-700">{error}</span>
         <button className="bg-sky-400 p-2 px-4 rounded-md" onClick={nextQuestion}>
           Responder

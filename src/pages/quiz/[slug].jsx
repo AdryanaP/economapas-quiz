@@ -9,12 +9,13 @@ import { useRouter } from "next/router";
 export default function Quiz() {
   const router = useRouter();
   const { slug, difficulty } = router.query;
-  const { questions, setQuestions } = useContext(MyContext);
+  const { questions, setQuestions, setMyAnswersQuiz } = useContext(MyContext);
 
   useEffect(() => {
     if (!slug) return;
 
     setQuestions([]);
+    setMyAnswersQuiz([])
 
     const fetchQuestions = async () => {
       await getQuestions(slug, difficulty)
