@@ -1,7 +1,6 @@
 import { useContext, useEffect } from "react";
 import MyContext from "../../contexts/myContext";
 import Navbar from "../../components/Navbar";
-import Head from "next/head";
 import Feedback from "../../components/Feedback";
 import Cards from "../../components/Cards";
 import { FaArrowDown } from "react-icons/fa";
@@ -24,10 +23,6 @@ export default function Results() {
 
   return (
     <div>
-      <Head>
-        <title>Economapas Quiz</title>
-        <link rel="icon" type="image/png" sizes="16x16" href="/logo.png"></link>
-      </Head>
       <Navbar />
       <main className="pb-8">
         <section className="md:mx-28 mt-24 md:border rounded-md md:shadow-xl p-3">

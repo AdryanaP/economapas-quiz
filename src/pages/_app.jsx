@@ -1,6 +1,7 @@
 import "../styles/global.css";
 import "tailwindcss/tailwind.css";
 import MyContext from "../contexts/myContext";
+import Head from "next/head";
 import { useState } from "react";
 
 function MyApp({ Component, pageProps }) {
@@ -11,8 +12,8 @@ function MyApp({ Component, pageProps }) {
   const [myAnswersQuiz, setMyAnswersQuiz] = useState([]);
   const [allMyAnswers, setAllMyAnswers] = useState([]);
   const [answerChosen, setAnswerChosen] = useState("");
-  const [correctAnswersQuiz, setCorrectAnswersQuiz ] = useState(0)
-  const [allCorrectAnswers, setAllCorrectAnswers ] = useState(0)
+  const [correctAnswersQuiz, setCorrectAnswersQuiz] = useState(0);
+  const [allCorrectAnswers, setAllCorrectAnswers] = useState(0);
 
   const context = {
     name,
@@ -31,11 +32,16 @@ function MyApp({ Component, pageProps }) {
     setAnswerChosen,
     correctAnswersQuiz,
     setCorrectAnswersQuiz,
-    allCorrectAnswers, setAllCorrectAnswers
+    allCorrectAnswers,
+    setAllCorrectAnswers,
   };
 
   return (
     <MyContext.Provider value={context}>
+      <Head>
+        <title>Economapas Quiz</title>
+        <link rel="icon" type="image/png" sizes="16x16" href="/logo.png"></link>
+      </Head>
       <Component {...pageProps} />
     </MyContext.Provider>
   );

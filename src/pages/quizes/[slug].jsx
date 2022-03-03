@@ -1,7 +1,6 @@
 import Navbar from "../../components/Navbar";
 import Cards from "../../components/Cards";
 import { useContext, useEffect } from "react";
-import Head from "next/head";
 import MyContext from "../../contexts/myContext";
 import { useRouter } from "next/router";
 
@@ -24,10 +23,6 @@ export default function Quizes() {
 
   return (
     <div className="h-full">
-      <Head>
-        <title>Economapas Quiz</title>
-        <link rel="icon" type="image/png" sizes="16x16" href="/logo.png"></link>
-      </Head>
       <Navbar />
       <section
         className="grid md:grid-cols-2 justify-center items-center 

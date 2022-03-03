@@ -38,15 +38,7 @@ export default function Home() {
 
   return (
     <div>
-      <Head>
-        <title>Economapas Quiz</title>
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/logo.png"
-        ></link>
-      </Head>
+
 
       <main>
         <section className="translate absolute top-1/2 left-1/2 flex justify-center items-center">

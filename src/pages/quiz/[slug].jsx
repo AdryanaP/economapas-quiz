@@ -1,7 +1,6 @@
 import MyContext from "../../contexts/myContext";
 import Navbar from "../../components/Navbar";
 import Question from "../../components/Question";
-import Head from "next/head";
 import { useEffect, useContext } from "react";
 import { getQuestions } from "../../repository/questionsRepository";
 import { useRouter } from "next/router";
@@ -42,10 +41,6 @@ export default function Quiz() {
 
   return (
     <div>
-      <Head>
-        <title>Economapas Quiz</title>
-        <link rel="icon" type="image/png" sizes="16x16" href="/logo.png"></link>
-      </Head>
       <Navbar />
       <div className="flex justify-center">
         <Question />
