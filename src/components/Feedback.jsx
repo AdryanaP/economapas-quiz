@@ -17,7 +17,7 @@ export default function Feedback() {
   }
 
   return (
-    <section className="md:mx-28 py-6 grid lg:grid-cols-2 xl:grid-cols-4 gap-4">
+    <section className="md:mx-28 py-6 grid lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4">
       {questions.map((question, i) => (
         <div
           key={question.id}
@@ -39,7 +39,7 @@ export default function Feedback() {
                           answer.isMyAnswer ? "bg-green-400" : ""
                         }`}
                       >
-                        <li className="font-bold">{answer.label}</li>
+                        <li className="font-bold break-all">{answer.label}</li>
                         <span>
                           <FaCheck />
                         </span>
@@ -52,7 +52,7 @@ export default function Feedback() {
                           answer.isMyAnswer ? "bg-red-400" : ""
                         }`}
                       >
-                        <li>{answer.label}</li>
+                        <li className="break-all">{answer.label}</li>
                         <span>{answer.isMyAnswer ? <FaBan /> : ""}</span>
                       </div>
                     )}

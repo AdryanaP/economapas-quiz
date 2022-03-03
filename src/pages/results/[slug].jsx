@@ -30,7 +30,7 @@ export default function Results() {
       </Head>
       <Navbar />
       <main className="pb-8">
-        <section className="md:mx-28 mt-24 md:border rounded-md md:shadow-xl">
+        <section className="md:mx-28 mt-24 md:border rounded-md md:shadow-xl p-3">
           <div className="p-4 md:p-6 mb-6 bg-white rounded-t text-center w-auto space-y-8 center shadow-xl">
             <p className="text-xl">
               Acertou {correctAnswersQuiz} de {myAnswersQuiz.length} questões!
@@ -48,7 +48,7 @@ export default function Results() {
 
         <section
           id="moreQuizes"
-          className="my-16 md:mx-28 md:border rounded-md md:shadow-xl"
+          className="my-16 md:mx-28 md:border p-3 rounded-md md:shadow-xl"
         >
           <div className="p-4 md:p-6 bg-white rounded-t-md w-auto space-y-8 shadow-xl">
             <h2 className="text-xl text-center font-highlight">
@@ -56,8 +56,8 @@ export default function Results() {
             </h2>
           </div>
           <div
-            className="grid md:grid-cols-2 2xl:grid-cols-4 justify-center items-center 
-              justify-items-center md:gap-8 mx-28 my-10"
+            className="grid lg:grid-cols-2 2xl:grid-cols-4 justify-center items-center 
+              justify-items-center md:gap-8 mx-2 xl:mx-28 my-10"
           >
             <Cards />
           </div>
