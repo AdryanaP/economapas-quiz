@@ -4,22 +4,11 @@ import Navbar from "../../components/Navbar";
 import Feedback from "../../components/Feedback";
 import Cards from "../../components/Cards";
 import { FaArrowDown } from "react-icons/fa";
-import { useRouter } from "next/router";
 
 export default function Results() {
-  const router = useRouter();
-  const { name, setIndex, myAnswersQuiz, correctAnswersQuiz } =
-    useContext(MyContext);
+  const { setIndex, myAnswersQuiz, correctAnswersQuiz } = useContext(MyContext);
 
   setIndex(0);
-
-  useEffect(() => {
-    if (!name) {
-      router.push({
-        pathname: "/",
-      });
-    }
-  }, []);
 
   return (
     <div>

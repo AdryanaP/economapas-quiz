@@ -8,21 +8,10 @@ import { useRouter } from "next/router";
 export default function Quiz() {
   const router = useRouter();
   const { slug, difficulty } = router.query;
-  const {
-    setQuestions,
-    setMyAnswersQuiz,
-    setIndex,
-    name,
-    setCorrectAnswersQuiz,
-  } = useContext(MyContext);
+  const { setQuestions, setMyAnswersQuiz, setIndex, setCorrectAnswersQuiz } =
+    useContext(MyContext);
 
   useEffect(() => {
-    if (!name) {
-      router.push({
-        pathname: "/",
-      });
-    }
-
     if (!slug) return;
 
     setMyAnswersQuiz([]);

@@ -2,20 +2,12 @@ import Navbar from "../../components/Navbar";
 import Cards from "../../components/Cards";
 import { useContext, useEffect } from "react";
 import MyContext from "../../contexts/myContext";
-import { useRouter } from "next/router";
 
 export default function Quizes() {
-  const router = useRouter();
-  const { setMyAnswersQuiz, setIndex, setCorrectAnswersQuiz, name } =
+  const { setMyAnswersQuiz, setIndex, setCorrectAnswersQuiz } =
     useContext(MyContext);
 
   useEffect(() => {
-    if (!name) {
-      router.push({
-        pathname: "/",
-      });
-    }
-
     setMyAnswersQuiz([]);
     setIndex(0);
     setCorrectAnswersQuiz(0);
