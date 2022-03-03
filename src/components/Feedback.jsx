@@ -20,7 +20,7 @@ export default function Feedback() {
     <section className="md:mx-28 py-6 grid lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4">
       {questions.map((question, i) => (
         <div
-          key={question.id}
+          key={question.i}
           className="space-y-4 bg-white rounded p-4 md:p-8"
         >
           <p className="font-bold font-highlight text-lg">
