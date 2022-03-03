@@ -1,7 +1,5 @@
 import Link from "next/link";
-import { useContext, useEffect } from "react";
 import { useRouter } from "next/router";
-import MyContext from "../contexts/myContext";
 
 export default function () {
   const router = useRouter();
@@ -50,7 +48,7 @@ export default function () {
             >
               <a
                 className="w-full p-4 border-r border-r-whiteTransparent bg-primary
-              hover:bg-green-300 transition ease-in-out delay-150 rounded-bl"
+                hover:bg-green-300 transition ease-in-out delay-150 rounded-bl"
               >
                 Fácil
               </a>
@@ -64,7 +62,7 @@ export default function () {
             >
               <a
                 className="w-full p-4 bg-primary hover:bg-orange-300 
-              transition ease-in-out delay-150 rounded-br"
+                  transition ease-in-out delay-150 rounded-br"
               >
                 Difícil
               </a>

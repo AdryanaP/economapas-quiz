@@ -46,7 +46,10 @@ export default function Results() {
           <Feedback />
         </section>
 
-        <section id="moreQuizes" className="my-16 md:mx-28 md:border rounded-md md:shadow-xl">
+        <section
+          id="moreQuizes"
+          className="my-16 md:mx-28 md:border rounded-md md:shadow-xl"
+        >
           <div className="p-4 md:p-6 bg-white rounded-t-md w-auto space-y-8 shadow-xl">
             <h2 className="text-xl text-center font-highlight">
               Faça outros quizes:
@@ -54,7 +57,7 @@ export default function Results() {
           </div>
           <div
             className="grid md:grid-cols-2 2xl:grid-cols-4 justify-center items-center 
-          justify-items-center md:gap-8 mx-28 my-10"
+              justify-items-center md:gap-8 mx-28 my-10"
           >
             <Cards />
           </div>

@@ -79,7 +79,7 @@ export default function Question() {
         <span className="text-xs text-red-700">{error}</span>
         <button
           className="bg-primary hover:bg-indigo-300 transition 
-          ease-in-out delay-150 p-2 px-4 rounded-md"
+            ease-in-out delay-150 p-2 px-4 rounded-md"
           onClick={nextQuestion}
         >
           Responder
