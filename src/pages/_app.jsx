@@ -2,7 +2,8 @@ import "../styles/global.css";
 import "tailwindcss/tailwind.css";
 import MyContext from "../contexts/myContext";
 import Head from "next/head";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }) {
   const [name, setName] = useState("");
@@ -35,6 +36,16 @@ function MyApp({ Component, pageProps }) {
     allCorrectAnswers,
     setAllCorrectAnswers,
   };
+
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!name) {
+      router.push({
+        pathname: "/",
+      });
+    }
+  }, []);
 
   return (
     <MyContext.Provider value={context}>
