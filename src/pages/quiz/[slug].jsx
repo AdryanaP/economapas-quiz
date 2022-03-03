@@ -10,7 +10,6 @@ export default function Quiz() {
   const router = useRouter();
   const { slug, difficulty } = router.query;
   const {
-    questions,
     setQuestions,
     setMyAnswersQuiz,
     setIndex,
@@ -41,18 +40,11 @@ export default function Quiz() {
     fetchQuestions();
   }, [slug]);
 
-  console.log(questions);
-
   return (
     <div>
       <Head>
         <title>Economapas Quiz</title>
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/logo.png"
-        ></link>
+        <link rel="icon" type="image/png" sizes="16x16" href="/logo.png"></link>
       </Head>
       <Navbar />
       <div className="flex justify-center">

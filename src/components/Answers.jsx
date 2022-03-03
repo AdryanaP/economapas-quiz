@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import MyContext from "../contexts/myContext";
 
 export default function Question() {
@@ -27,7 +27,11 @@ export default function Question() {
                 value={answer}
                 onClick={() => saveAnswer(answer)}
               />
-              <label htmlFor={answer} className="w-full py-2 md:py-4 cursor-pointer" onClick={() => saveAnswer(answer)}>
+              <label
+                htmlFor={answer}
+                className="w-full py-2 md:py-4 cursor-pointer"
+                onClick={() => saveAnswer(answer)}
+              >
                 {questions[index].answers[answer]}
               </label>
             </div>
