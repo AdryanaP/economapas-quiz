@@ -61,8 +61,8 @@ export default function Question() {
 
   return (
     <div
-      className="p-8 md:p-12 bg-white rounded text-center w-96 sm:w-29 
-        space-y-8 my-28 md:my-40 z-1 shadow-xl"
+      className="bg-white rounded text-center w-96 sm:w-29 
+        space-y-8 my-28 md:my-40 mx-3 px-3 p-6 sm:px-6 md:p-12 z-1 shadow-xl"
       key={index}
     >
       {questions[index] && (
