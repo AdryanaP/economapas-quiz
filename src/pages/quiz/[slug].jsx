@@ -9,13 +9,28 @@ import { useRouter } from "next/router";
 export default function Quiz() {
   const router = useRouter();
   const { slug, difficulty } = router.query;
-  const { questions, setQuestions, setMyAnswersQuiz } = useContext(MyContext);
+  const {
+    questions,
+    setQuestions,
+    setMyAnswersQuiz,
+    setIndex,
+    name,
+    setCorrectAnswersQuiz,
+  } = useContext(MyContext);
 
   useEffect(() => {
+    if (!name) {
+      router.push({
+        pathname: "/",
+      });
+    }
+
     if (!slug) return;
 
+    setMyAnswersQuiz([]);
+    setIndex(0);
+    setCorrectAnswersQuiz(0);
     setQuestions([]);
-    setMyAnswersQuiz([])
 
     const fetchQuestions = async () => {
       await getQuestions(slug, difficulty)
@@ -36,7 +51,7 @@ export default function Quiz() {
           rel="icon"
           type="image/png"
           sizes="16x16"
-          href="/favicon-16x16.png"
+          href="/logo.png"
         ></link>
       </Head>
       <Navbar />

@@ -29,16 +29,16 @@ export default function Feedback() {
               console.log(answer);
               if (answer.label) {
                 return (
-                  <div>
+                  <ul className="list-none">
                     {answer.isCorrectAnswer && (
                       <div
                         key={answer.label}
-                        className={`flex gap-3 items-center justify-between ${
+                        className={`flex gap-3 items-center justify-between p-2 rounded-md ${
                           answer.isMyAnswer ? "bg-green-400" : ""
                         }`}
                       >
-                        <li className="font-bold break-all">{answer.label}</li>
-                        <span className="mr-1">
+                        <li className="font-bold">{answer.label}</li>
+                        <span>
                           <FaCheck />
                         </span>
                       </div>
@@ -46,17 +46,17 @@ export default function Feedback() {
                     {!answer.isCorrectAnswer && (
                       <div
                         key={answer.label}
-                        className={`flex gap-3 items-center justify-between ${
+                        className={`flex gap-3 items-center justify-between p-2 rounded-md ${
                           answer.isMyAnswer ? "bg-red-400" : ""
                         }`}
                       >
-                        <li className="break-all">{answer.label}</li>
-                        <span className="mr-1">
+                        <li>{answer.label}</li>
+                        <span>
                           {answer.isMyAnswer ? <FaBan /> : ""}
                         </span>
                       </div>
                     )}
-                  </div>
+                  </ul>
                 );
               }
             }

@@ -40,8 +40,6 @@ export default function Question() {
     }
   };
 
-  console.log(index);
-
   const nextQuestion = () => {
     if (!answerChosen) {
       setError("Marque uma opção");
@@ -64,7 +62,7 @@ export default function Question() {
   return (
     <div
       className="p-8 md:p-12 bg-white rounded text-center w-96 sm:w-29 
-        space-y-8 my-28 md:my-40 z-1"
+        space-y-8 my-28 md:my-40 z-1 shadow-xl"
       key={index}
     >
       {questions[index] && (
@@ -79,7 +77,11 @@ export default function Question() {
       {!questions[index] && <p>Loading...</p>}
       <div className="flex items-center justify-between mt-8">
         <span className="text-xs text-red-700">{error}</span>
-        <button className="bg-sky-400 p-2 px-4 rounded-md" onClick={nextQuestion}>
+        <button
+          className="bg-primary hover:bg-indigo-300 transition 
+          ease-in-out delay-150 p-2 px-4 rounded-md"
+          onClick={nextQuestion}
+        >
           Responder
         </button>
       </div>

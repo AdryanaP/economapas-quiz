@@ -9,7 +9,9 @@ module.exports = {
         29: "29rem"
       },
       colors: {
-        whiteTransparent: "#ffffff4d"
+        whiteTransparent: "#ffffff75",
+        primary: "#7e8cec",
+        secondary: "#606fd4"
       }
     },
   },
