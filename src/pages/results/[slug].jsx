@@ -26,12 +26,7 @@ export default function Results() {
     <div>
       <Head>
         <title>Economapas Quiz</title>
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/logo.png"
-        ></link>
+        <link rel="icon" type="image/png" sizes="16x16" href="/logo.png"></link>
       </Head>
       <Navbar />
       <main className="pb-8">
@@ -42,16 +37,16 @@ export default function Results() {
             </p>
           </div>
           <div className="mx-2 md:mx-28 flex justify-between text-sm md:text-lg text-white">
-            <p>Confira o gabarito:</p>
-            <div className="flex items-center gap-2">
+            <p className="cursor-default">Confira o gabarito:</p>
+            <a href="#moreQuizes" className="flex items-center gap-2">
               <p>Outros quizes </p>
               <FaArrowDown />
-            </div>
+            </a>
           </div>
           <Feedback />
         </section>
 
-        <section className="my-16 md:mx-28 md:border rounded-md md:shadow-xl">
+        <section id="moreQuizes" className="my-16 md:mx-28 md:border rounded-md md:shadow-xl">
           <div className="p-4 md:p-6 bg-white rounded-t-md w-auto space-y-8 shadow-xl">
             <h2 className="text-xl text-center font-highlight">
               Faça outros quizes:
