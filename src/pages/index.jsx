@@ -44,13 +44,13 @@ export default function Home() {
           rel="icon"
           type="image/png"
           sizes="16x16"
-          href="/favicon-16x16.png"
+          href="/logo.png"
         ></link>
       </Head>
 
       <main>
         <section className="translate absolute top-1/2 left-1/2 flex justify-center items-center">
-          <div className="bg-whiteTransparent rounded-md p-10 md:p-20 md:w-96 text-center space-y-8 shadow-xl">
+          <div className="bg-white rounded-md p-10 md:p-20 md:w-96 text-center space-y-8 shadow-xl">
             <h1 className="font-highlight text-2xl text-black">
               Insira seu nome:
             </h1>
@@ -60,7 +60,7 @@ export default function Home() {
                 id="inputName"
                 placeholder="Seu nome"
                 className="p-2 block mb-4 ml-0 bg-transparent placeholder-zinc-500 border-b border-b-black 
-                outline-0 transition ease-in-out delay-150 focus:border-b-sky-400"
+                  outline-0 transition ease-in-out delay-150 focus:border-b-secondary"
                 onChange={changeName}
                 onKeyPress={(event) => {
                   if (event.key === "Enter") {
@@ -82,7 +82,8 @@ export default function Home() {
                 </span>
                 <button
                   type="button"
-                  className="bg-sky-400 p-2 px-4 rounded-md"
+                  className="bg-primary hover:bg-indigo-300 transition 
+                    ease-in-out delay-150 p-2 px-4 rounded-md"
                   onClick={(event) => validateInput(event)}
                 >
                   Entrar

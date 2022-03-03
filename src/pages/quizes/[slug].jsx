@@ -30,13 +30,13 @@ export default function Quizes() {
           rel="icon"
           type="image/png"
           sizes="16x16"
-          href="/favicon-16x16.png"
+          href="/logo.png"
         ></link>
       </Head>
       <Navbar />
       <section
         className="grid md:grid-cols-2 justify-center items-center 
-        justify-items-center md:gap-8 p-8 lg:px-20 pt-16 mt-6 md:mt-28"
+        justify-items-center md:gap-8 p-8 lg:px-44 pt-28 md:pt-60"
       >
         <Cards />
       </section>

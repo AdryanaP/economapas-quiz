@@ -34,21 +34,26 @@ export default function () {
     <>
       {cards.map((card) => (
         <div
-          className="p-8 md:p-12 bg-white rounded text-center w-64 md:w-80 space-y-8 mb-8"
+          className="bg-white rounded text-center w-64 md:w-80 mb-8 shadow-xl"
           key={card.title}
         >
-          <div className="space-y-1">
+          <div className="space-y-1 p-8 rounded-md">
             <p className="text-xl font-bold font-highlight">{card.title}</p>
             <p>{card.description}</p>
           </div>
-          <div className="flex justify-center items-center gap-4">
+          <div className="flex justify-center items-center">
             <Link
               href={{
                 pathname: `/quiz/[slug]`,
                 query: { slug: card.value, difficulty: "Easy", name: slug },
               }}
             >
-              <a className="bg-sky-400 p-2 w-16 rounded">Fácil</a>
+              <a
+                className="w-full p-4 border-r border-r-whiteTransparent bg-primary
+              hover:bg-green-300 transition ease-in-out delay-150 rounded-bl"
+              >
+                Fácil
+              </a>
             </Link>
 
             <Link
@@ -57,7 +62,12 @@ export default function () {
                 query: { slug: card.value, difficulty: "Hard", name: slug },
               }}
             >
-              <a className="bg-sky-400 p-2 w-16 rounded">Difícil</a>
+              <a
+                className="w-full p-4 bg-primary hover:bg-orange-300 
+              transition ease-in-out delay-150 rounded-br"
+              >
+                Difícil
+              </a>
             </Link>
           </div>
         </div>

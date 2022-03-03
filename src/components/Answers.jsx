@@ -17,7 +17,7 @@ export default function Question() {
             <div
               key={answer}
               className={`flex gap-3 items-center border rounded-3xl px-2 md:px-4 ${
-                answer === answerChosen ? "border-sky-400" : ""
+                answer === answerChosen ? "border-primary" : ""
               }`}
             >
               <input
